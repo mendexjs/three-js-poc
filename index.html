@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        #lassoCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+        #drawer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            height: 400px;
+            background: #ededed;
+            overflow: auto;
+            border-radius: 15px 15px 0 0;
+            padding: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+            display: none;
+        }
+        .card {
+            border: 1px solid dimgray;
+            border-radius: 4px;
+            padding: 8px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="controls">
+    <button id="orbitControlBtn">Orbit Control</button>
+    <button id="lassoToolBtn">Lasso Tool</button>
+</div>
+<div id="drawer">
+
+</div>
+<canvas id="lassoCanvas"></canvas>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
